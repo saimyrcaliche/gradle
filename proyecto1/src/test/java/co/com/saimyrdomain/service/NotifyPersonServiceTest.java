@@ -24,7 +24,7 @@ public class NotifyPersonServiceTest {
 	public void notifyTest (){
 		//Arrange preparar datos
 		Person person = new PersonTestDataBuilder().build();
-		Mockito.when(emailService.sendEmail(Mockito.anyString())).thenReturn(null);
+		Mockito.when(emailService.sendEmail(Mockito.anyString())).thenReturn("Ya corregido");
 		
 		//Act ejecutar
 		String message = notifyPersonSerice.notify(person);
